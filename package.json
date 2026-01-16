@@ -29,6 +29,7 @@
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.36.2",
     "express": "^4.21.1",
+    "node": "^25.3.0",
     "uuid": "^11.0.3"
   },
   "prettier": {
