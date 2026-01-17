@@ -21,11 +21,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run tests
+      - name: Run Tests
         run: npm run test -- --coverage
 
-  Style:
-    name: Tests
+  style:
+    name: Style
     runs-on: ubuntu-latest
 
     steps:
@@ -40,5 +40,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Style check
+      - name: run format check 
         run: npm run format:check
+
+      - name: run lint check
+        run: npm run lint -- --max-warnings=0
