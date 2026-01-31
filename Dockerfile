@@ -1,8 +1,12 @@
-FROM --platform=linux/amd64 node:18-slim
+FROM node:18
 
 WORKDIR /usr/src/app
 
 ADD . .
+
+COPY package*.json ./
+
+COPY ./src ./src
 
 RUN npm ci
 
