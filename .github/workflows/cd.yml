@@ -33,4 +33,4 @@ jobs:
         uses: 'google-github-actions/setup-gcloud@v3'
 
       - name: 'Build / push docker image'
-        run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-486022/notely-ar-repo/ihatecd:cdisshit . 
+        run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-486022/notely-ar-repo/ihatecd:cdisshit --region us-central1 --allow-unauthenticated --project notely-486022 --max-instances=4
