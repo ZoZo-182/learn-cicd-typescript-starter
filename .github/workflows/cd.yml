@@ -38,7 +38,7 @@ jobs:
       - name: 'Build / push docker image'
         run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-486022/notely-ar-repo/ihatecd:cdisshit .
 
-      - name: 'migrations'
+      - name: 'db migrations'
         run: npm run db:migrate
 
       - name: 'Deploy to Cloud Run'
